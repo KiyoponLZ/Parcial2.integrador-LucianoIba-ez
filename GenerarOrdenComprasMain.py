@@ -139,7 +139,7 @@ def main():
             while True:
                 orden = cargar_orden(ProductosDataBase)
                 listaOrdenCompras.append(orden)
-                # solicitar S o N de forma explícita
+                
                 while True:
                     resp = input("¿Desea cargar una nueva Orden de Compra? (S/N): ").strip().lower()
                     if resp in ('s', 'n'):
@@ -156,7 +156,7 @@ def main():
                 continue
             orden = mostrar_orden_por_numero(listaOrdenCompras, nro)
             if orden:
-                # solicitar S o N de forma explícita
+                
                 while True:
                     gen = input("¿Desea generar el archivo de la Orden de Compra? (S/N): ").strip().lower()
                     if gen in ('s', 'n'):
