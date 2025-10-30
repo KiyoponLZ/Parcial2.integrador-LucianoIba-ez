@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from Producto import Producto
+from Producto import Producto 
 
 
 @dataclass
@@ -10,7 +10,7 @@ class DetalleOrdenCompra:
     def __post_init__(self):
         if self.cantidad < 1:
             raise ValueError("La cantidad debe ser mayor a 0")
-        # subtotal calculated on creation
+        
         self.subtotal = self.cantidad * float(self.producto.precioCompra)
 
     def __str__(self):
